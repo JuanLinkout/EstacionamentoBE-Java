@@ -1,22 +1,22 @@
 package com.estacionamento.carros.utils;
 
-import com.estacionamento.carros.DTO.CarroDTO;
-import com.estacionamento.carros.DTO.CarroParamsDTO;
+import com.estacionamento.carros.domain.Carro;
+import com.estacionamento.carros.DTO.CarroCreateDTO;
 
 public class CarroUtils {
 
-    public static CarroDTO getCarroDTOfromCarroParamsDTO(CarroParamsDTO carroParamsDTO) {
-        CarroDTO carroDTO = new CarroDTO();
-        carroDTO.setPlaca(carroParamsDTO.getPlaca());
-        carroDTO.setNome(carroParamsDTO.getNome());
-        carroDTO.setMotor(carroParamsDTO.getMotor());
-        carroDTO.setModelo(carroParamsDTO.getModelo());
-        carroDTO.setCor(carroParamsDTO.getCor());
-        carroDTO.setAno(carroParamsDTO.getAno());
-        carroDTO.setCategoria(carroParamsDTO.getCategoria());
-        carroDTO.setKm(carroParamsDTO.getKm());
-        carroDTO.setCombustivel(carroParamsDTO.getCombustivel());
+    public static Carro getCarroFromCarroCreate(CarroCreateDTO carroCreateDTO) {
+        Carro carro = new Carro();
+        carro.setPlaca(carroCreateDTO.getPlaca());
+        carro.setNome(carroCreateDTO.getNome());
+        carro.setMotor(carroCreateDTO.getMotor());
+        carro.setModelo(carroCreateDTO.getModelo());
+        carro.setCor(carroCreateDTO.getCor());
+        carro.setAno(carroCreateDTO.getAno());
+        carro.setCategoria(carroCreateDTO.getCategoria());
+        carro.setKm(carroCreateDTO.getKm());
+        carro.setCombustivel(carroCreateDTO.getCombustivel());
 
-        return carroDTO;
+        return carro;
     }
 }

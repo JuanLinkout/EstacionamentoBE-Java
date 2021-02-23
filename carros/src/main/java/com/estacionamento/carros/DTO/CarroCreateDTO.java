@@ -1,13 +1,7 @@
 package com.estacionamento.carros.DTO;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+public class CarroCreateDTO {
 
-@Document(collection="carros")
-public class CarroDTO {
-
-    @Id
-    private String id;
     private String nome;
     private String modelo;
     private String cor;
@@ -18,15 +12,7 @@ public class CarroDTO {
     private String placa;
     private String km;
 
-    public CarroDTO() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public CarroCreateDTO() {
     }
 
     public String getNome() {
